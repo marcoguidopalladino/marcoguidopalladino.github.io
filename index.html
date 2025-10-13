@@ -35,39 +35,53 @@
 
     <!-- Main Content -->
     <main class="py-10 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto">
-            <!-- Welcome Section -->
+        <div class="max-w-6xl mx-auto">
+            <!-- Welcome Section with Photo -->
             <div class="bg-white rounded-lg shadow-sm p-8 mb-8">
-                <h1 class="text-4xl font-light text-gray-800 mb-6">Marco G. Palladino</h1>
-                
-                <div class="prose prose-lg max-w-none">
-                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                        I am a Research Economist at the <strong>Banque de France</strong> and an <strong>Adjunct Professor</strong> at <strong>Sciences Po</strong> (School of Public Affairs). I am a fellow of the research network <strong>LinkEED 2.0</strong>.
-                    </p>
+                <div class="grid md:grid-cols-3 gap-8 items-start">
+                    <!-- Photo Column -->
+                    <div class="md:col-span-1">
+                        <img src="assets/images/profile.jpg" alt="Marco G. Palladino" class="w-full rounded-lg shadow-md">
+                        <p class="text-xs text-gray-500 text-center mt-2 italic">Upload your photo to: assets/images/profile.jpg</p>
+                    </div>
                     
-                    <!-- Action Buttons -->
-                    <div class="flex flex-wrap gap-4 my-8">
-                        <a href="assets/documents/Academic_CV.pdf" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors shadow-sm" target="_blank">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                            Download CV
-                        </a>
-                        <a href="mailto:marcoguidopalladino@gmail.com" class="inline-flex items-center px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-md hover:bg-blue-50 transition-colors">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
-                            Email
-                        </a>
+                    <!-- Content Column -->
+                    <div class="md:col-span-2">
+                        <h1 class="text-4xl font-light text-gray-800 mb-6">Marco G. Palladino</h1>
+                        
+                        <div class="prose prose-lg max-w-none">
+                            <h2 class="text-2xl font-normal text-gray-700 mb-4">Welcome!</h2>
+                            
+                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                                I am a Research Economist at the <strong>Banque de France</strong> and an <strong>Adjunct Professor</strong> at <strong>Sciences Po</strong> (School of Public Affairs). I am a fellow of the research network <strong>LinkEED 2.0</strong>.
+                            </p>
+                            
+                            <p class="text-gray-700 mb-4">
+                                You can download my CV from <a href="assets/documents/Academic_CV.pdf" class="text-blue-600 hover:text-blue-800 hover:underline font-medium" target="_blank">here</a>.
+                            </p>
+                            
+                            <p class="text-gray-700 mb-6">
+                                Email: <a href="mailto:marcoguidopalladino@gmail.com" class="text-blue-600 hover:text-blue-800 hover:underline">marcoguidopalladino@gmail.com</a>
+                            </p>
+                            
+                            <!-- Google Scholar Link -->
+                            <div class="mb-6">
+                                <a href="https://scholar.google.com/citations?user=KX48F8YAAAAJ" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors" title="Google Scholar Profile">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/>
+                                    </svg>
+                                    <span class="ml-2 text-sm font-medium">Google Scholar Profile</span>
+                                </a>
+                            </div>
+                            
+                            <div class="bg-gray-50 border-l-4 border-gray-300 p-4 rounded mt-6">
+                                <p class="text-sm text-gray-600 italic">
+                                    This is my personal website. The opinions shared here are my own and should not be associated with Banque de France.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Disclaimer -->
-            <div class="bg-gray-50 border-l-4 border-gray-300 p-4 rounded">
-                <p class="text-sm text-gray-600 italic">
-                    This is my personal website. The opinions shared here are my own and should not be associated with Banque de France.
-                </p>
             </div>
         </div>
     </main>
