@@ -6,26 +6,43 @@
     <title>Research - Marco G. Palladino</title>
     <meta name="description" content="Research publications and working papers by Marco G. Palladino">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Crimson Pro', serif;
+        }
+        .abstract-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .abstract-content.open {
+            max-height: 500px;
+            transition: max-height 0.5s ease-in;
+        }
+        .rotate-icon {
+            transition: transform 0.3s ease;
+        }
+        .rotate-icon.open {
+            transform: rotate(180deg);
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-50 border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex space-x-8">
-                    <a href="index.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 transition-colors">
+            <div class="flex justify-between h-20">
+                <div class="flex space-x-10">
+                    <a href="index.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-lg font-medium text-gray-600 hover:text-gray-900 hover:border-gray-300 transition-all">
                         About
                     </a>
-                    <a href="research.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-blue-500 text-sm font-medium text-gray-900">
+                    <a href="research.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-blue-600 text-lg font-medium text-gray-900">
                         Research
                     </a>
-                    <a href="policy-teaching.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 transition-colors">
+                    <a href="policy-teaching.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-lg font-medium text-gray-600 hover:text-gray-900 hover:border-gray-300 transition-all">
                         Policy & Teaching
                     </a>
                 </div>
@@ -34,91 +51,145 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="py-10 px-4 sm:px-6 lg:px-8">
+    <main class="py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-5xl mx-auto">
-            <h1 class="text-4xl font-light text-gray-800 mb-8">Research</h1>
+            <h1 class="text-5xl font-light text-gray-900 mb-12">Research</h1>
             
-            <!-- Publications Section -->
-            <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
-                <h2 class="text-2xl font-semibold text-gray-800 mb-6 pb-2 border-b-2 border-blue-500">Publications</h2>
+            <!-- Publications and Accepted Papers Section -->
+            <section class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+                <h2 class="text-3xl font-light text-gray-900 mb-8 pb-3 border-b-2 border-blue-600">Publications and Accepted Papers</h2>
                 
                 <div class="space-y-8">
-                    <div class="border-l-4 border-blue-500 pl-6">
-                        <h3 class="text-xl font-medium text-gray-800 mb-2">
-                            Narrowing Industry Wage Premiums and the Decline in the Gender Wage Gap
-                        </h3>
-                        <p class="text-gray-600 mb-2">with Alexandra Roulet and Mark Stabile</p>
-                        <p class="text-sm font-medium text-blue-600 mb-3">
-                            Accepted for publication at <em>Labour Economics</em>
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Working Papers Section -->
-            <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
-                <h2 class="text-2xl font-semibold text-gray-800 mb-6 pb-2 border-b-2 border-green-500">Working Papers</h2>
-                
-                <div class="space-y-10">
                     <!-- Paper 1 -->
-                    <div class="border-l-4 border-green-500 pl-6">
-                        <h3 class="text-xl font-medium text-gray-800 mb-2">
+                    <div class="border-l-4 border-blue-600 pl-6">
+                        <h3 class="text-2xl font-medium text-gray-900 mb-3">
                             In the Land of AKM: Explaining the Dynamics of Wage Inequality in France
                         </h3>
-                        <p class="text-gray-600 mb-2">with Damien Babet and Olivier Godechot</p>
-                        <p class="text-sm font-medium text-green-600 mb-3">
-                            2nd Round R&R at <em>Journal of Labor Economics</em>
+                        <p class="text-lg text-gray-700 mb-3">with Damien Babet and Olivier Godechot</p>
+                        <p class="text-base text-gray-600 mb-4 italic">
+                            Accepted at <span class="font-medium">Journal of Labor Economics</span>
                         </p>
-                        <div class="flex flex-wrap gap-3 mb-4">
-                            <a href="#" class="text-sm text-blue-600 hover:text-blue-800 hover:underline transition-colors">
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" class="text-blue-600 hover:text-blue-700 hover:underline font-medium transition-colors">
                                 BdF Working Paper, 2025
                             </a>
                             <span class="text-gray-400">|</span>
-                            <a href="#" class="text-sm text-blue-600 hover:text-blue-800 hover:underline transition-colors">
+                            <a href="#" class="text-blue-600 hover:text-blue-700 hover:underline font-medium transition-colors">
                                 Insee Working Paper, 2023
                             </a>
-                        </div>
-                        <div class="bg-gray-50 p-4 rounded-lg">
-                            <p class="text-sm font-medium text-gray-700 mb-2">Abstract:</p>
-                            <p class="text-gray-700 text-sm leading-relaxed">
-                                We use a newly constructed and quasi-exhaustive matched employer-employee database to study the contribution of firms to wage inequality in France. We implement a simple and tractable correction for the limited mobility bias. Our analysis, covering the period 2002-2019, reveals an increase in between-firm inequality, mainly due to the growing clustering of workers with similar market value. These phenomena are associated with increasing occupational specialization at the firm level.
-                            </p>
                         </div>
                     </div>
 
                     <!-- Paper 2 -->
-                    <div class="border-l-4 border-green-500 pl-6">
-                        <h3 class="text-xl font-medium text-gray-800 mb-2">
-                            The Role of Firms in the Gender Wage Gap: A Cross-Country Perspective
+                    <div class="border-l-4 border-blue-600 pl-6">
+                        <h3 class="text-2xl font-medium text-gray-900 mb-3">
+                            Narrowing Industry Wage Premiums and the Decline in the Gender Wage Gap
                         </h3>
-                        <p class="text-gray-600 mb-3">
-                            with Antoine Bertheau, Cesar Barreto, Dogan Gülümser, Alexander Hijzen, Anne Sophie Lassen, Balázs Muraközy, and Oskar Nordström Skans
+                        <p class="text-lg text-gray-700 mb-3">with Alexandra Roulet and Mark Stabile</p>
+                        <p class="text-base text-gray-600 mb-4 italic">
+                            <span class="font-medium">Labour Economics</span>, Volume 94, June 2025
                         </p>
-                        <div class="flex flex-wrap gap-3 mb-4">
-                            <a href="#" class="text-sm text-blue-600 hover:text-blue-800 hover:underline transition-colors">
-                                OECD Working Paper, 2024
-                            </a>
-                        </div>
-                        <div class="bg-gray-50 p-4 rounded-lg">
-                            <p class="text-sm font-medium text-gray-700 mb-2">Abstract:</p>
-                            <p class="text-gray-700 text-sm leading-relaxed">
-                                We quantify the role of gender-specific firm wage premiums in explaining the private-sector gender gap in hourly wages using a harmonized research design across 11 matched employer-employee datasets—ten European countries and Washington State, USA. These premiums explain the gender gap when women are less likely to work at high-paying firms (sorting) or receive lower premiums than men within the same firm (pay-setting). We find that firm wage premiums account for a substantial share of variation in gender wage gaps, ranging from 15 to 32 percent. While both mechanisms matter, sorting is the predominant driver of the firm contribution to the gender wage gap in most countries. Three patterns are broadly consistent: (1) women sorting into lower-paying firms becomes increasingly pronounced with age; (2) women are more concentrated in low-paying firms with a high share of part-time workers; and (3) pay-setting gaps are largest in high-wage firms, where women receive about 90 percent of the rents men receive from firm surplus gains.
-                            </p>
-                        </div>
                     </div>
                 </div>
             </section>
 
             <!-- Work in Progress Section -->
-            <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
-                <h2 class="text-2xl font-semibold text-gray-800 mb-6 pb-2 border-b-2 border-gray-400">Work in Progress</h2>
+            <section class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+                <h2 class="text-3xl font-light text-gray-900 mb-8 pb-3 border-b-2 border-green-600">Work in Progress</h2>
+                
+                <div class="space-y-8">
+                    <!-- Paper 1 -->
+                    <div class="border-l-4 border-green-600 pl-6">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-grow">
+                                <h3 class="text-2xl font-medium text-gray-900 mb-3">
+                                    Why Do Firms Use Fixed-Term Contracts?
+                                </h3>
+                                <p class="text-lg text-gray-700 mb-3">with Matteo Sartori and Eliana Viviano</p>
+                            </div>
+                            <button onclick="toggleAbstract('abstract1')" class="ml-4 p-2 hover:bg-gray-100 rounded-lg transition-colors flex-shrink-0">
+                                <svg class="w-6 h-6 text-gray-600 rotate-icon" id="icon1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="abstract1" class="abstract-content">
+                            <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                                <p class="text-base text-gray-700 leading-relaxed">
+                                    <span class="font-medium">Abstract:</span> This paper investigates why firms use fixed-term contracts and the implications for labor market dynamics. We analyze firm-level data to understand the strategic decisions behind temporary employment arrangements.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paper 2 -->
+                    <div class="border-l-4 border-green-600 pl-6">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-grow">
+                                <h3 class="text-2xl font-medium text-gray-900 mb-3">
+                                    Firms and the Gender Wage Gap: A Comparison of Eleven Countries
+                                </h3>
+                                <p class="text-lg text-gray-700 mb-3">
+                                    with Antoine Bertheau, Alexander Hijzen, Astrid Kunze and the LinkEED team
+                                </p>
+                                <p class="text-base text-red-600 font-medium mb-2">
+                                    [Nber SI 2025 Gender in the Economy / Labor Studies Talk] -- Draft available soon!
+                                </p>
+                            </div>
+                            <button onclick="toggleAbstract('abstract2')" class="ml-4 p-2 hover:bg-gray-100 rounded-lg transition-colors flex-shrink-0">
+                                <svg class="w-6 h-6 text-gray-600 rotate-icon" id="icon2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="abstract2" class="abstract-content">
+                            <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                                <p class="text-base text-gray-700 leading-relaxed">
+                                    <span class="font-medium">Abstract:</span> We quantify the role of gender-specific firm wage premiums in explaining the private-sector gender gap in hourly wages using a harmonized research design across 11 matched employer-employee datasets—ten European countries and Washington State, USA. These premiums explain the gender gap when women are less likely to work at high-paying firms (sorting) or receive lower premiums than men within the same firm (pay-setting). We find that firm wage premiums account for a substantial share of variation in gender wage gaps, ranging from 15 to 32 percent.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paper 3 -->
+                    <div class="border-l-4 border-green-600 pl-6">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-grow">
+                                <h3 class="text-2xl font-medium text-gray-900 mb-3">
+                                    Dignity by Decree? The Employment and Wage Effects of Restricting Fixed-Term Contracts
+                                </h3>
+                                <p class="text-lg text-gray-700 mb-3">with Matteo Sartori and Giuseppe Grasso</p>
+                            </div>
+                            <button onclick="toggleAbstract('abstract3')" class="ml-4 p-2 hover:bg-gray-100 rounded-lg transition-colors flex-shrink-0">
+                                <svg class="w-6 h-6 text-gray-600 rotate-icon" id="icon3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="abstract3" class="abstract-content">
+                            <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                                <p class="text-base text-gray-700 leading-relaxed">
+                                    <span class="font-medium">Abstract:</span> This paper examines the employment and wage effects of policies that restrict the use of fixed-term contracts. We analyze the impact of regulatory changes on labor market outcomes and worker welfare.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Book Chapters Section -->
+            <section class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+                <h2 class="text-3xl font-light text-gray-900 mb-8 pb-3 border-b-2 border-purple-600">Book Chapters</h2>
                 
                 <div class="space-y-6">
-                    <div class="border-l-4 border-gray-400 pl-6">
-                        <h3 class="text-xl font-medium text-gray-800 mb-2">
-                            Employment Protection Legislation and Job Reallocation Across Sectors, Firms and Workers
+                    <div class="border-l-4 border-purple-600 pl-6">
+                        <h3 class="text-2xl font-medium text-gray-900 mb-3">
+                            Employment Protection Legislation and Job Reallocation across Sectors, Firms and Workers
                         </h3>
-                        <p class="text-gray-600">with Pierre Cahuc</p>
+                        <p class="text-lg text-gray-700 mb-3">with Pierre Cahuc</p>
+                        <p class="text-base text-gray-600 mb-2 italic">
+                            <span class="font-medium">Handbook on Labour Markets in Transition</span> (December 2024)
+                        </p>
                     </div>
                 </div>
             </section>
@@ -126,12 +197,27 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 mt-16">
+    <footer class="bg-white/60 backdrop-blur-sm border-t border-gray-200 mt-16">
         <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-gray-500 text-sm">
-                © 2025 Marco G. Palladino. All rights reserved.
-            </p>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-base text-gray-700 italic">
+                    This is my personal website. The opinions shared here are my own and should not be associated with Banque de France.
+                </p>
+                <p class="text-base text-gray-600 whitespace-nowrap">
+                    © 2025 Marco G. Palladino. All rights reserved.
+                </p>
+            </div>
         </div>
     </footer>
+
+    <script>
+        function toggleAbstract(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon' + id.slice(-1));
+            
+            content.classList.toggle('open');
+            icon.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
