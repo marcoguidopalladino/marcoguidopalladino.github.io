@@ -230,22 +230,11 @@
     <script>
         function toggleAbstract(id) {
             const content = document.getElementById(id);
-            const iconId = 'icon' + id.replace('abstract', '').replace('-wp', '');
-            const icon = document.getElementById(iconId);
+            const icon = document.getElementById('icon' + id.replace('abstract', ''));
             
             content.classList.toggle('open');
             if (icon) {
                 icon.classList.toggle('open');
-            }
-            
-            // Toggle button text for Working Papers abstract
-            if (id.includes('wp')) {
-                const button = content.previousElementSibling;
-                if (content.classList.contains('open')) {
-                    button.textContent = '▲ Hide Abstract';
-                } else {
-                    button.textContent = '▼ Show Abstract';
-                }
             }
         }
     </script>
