@@ -44,6 +44,9 @@ Sito personale accademico di Marco Guido Palladino.
 - Le pagine sono HTML puro
 - Mantieni la formattazione e le classi esistenti
 
+- ## Git workflow
+Committa e pusha direttamente su main. Non creare branch separati o pull request.
+
 ## Convenzioni
 - Commit in inglese
 - Nomi file: lowercase con trattini (es. `my-paper.pdf`)
