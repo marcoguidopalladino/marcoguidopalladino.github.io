@@ -1,4 +1,5 @@
 """Collect aggregate GoatCounter statistics and save only an encrypted report."""
+import base64
 import json
 import os
 from pathlib import Path
@@ -101,6 +102,8 @@ def main():
     ], input=json.dumps(report, ensure_ascii=False).encode(), check=True,
        stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
     print("Encrypted analytics report created successfully.")
+    # Readable through the authenticated GitHub log connector; still encrypted.
+    print("GOATCOUNTER_REPORT_CMS_BASE64=" + base64.b64encode(destination.read_bytes()).decode("ascii"))
 
 
 if __name__ == "__main__":
