@@ -1,0 +1,38 @@
+name: GoatCounter report
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/analytics/**'
+      - '.github/workflows/goatcounter-report.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: goatcounter-report
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Collect and encrypt aggregate statistics
+        env:
+          GOATCOUNTER_API_TOKEN: ${{ secrets.GOATCOUNTER_API_TOKEN }}
+        run: python3 .github/analytics/collect.py
+      - name: Save encrypted report
+        uses: actions/upload-artifact@v4
+        with:
+          name: goatcounter-report-encrypted
+          path: ${{ runner.temp }}/goatcounter-report.cms
+          if-no-files-found: error
+          retention-days: 90
