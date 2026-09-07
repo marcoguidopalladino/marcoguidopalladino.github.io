@@ -33,7 +33,7 @@ def get(endpoint, params):
                 time.sleep(2 ** attempt)
                 continue
             # Never put response bodies or request headers in public Actions logs.
-            raise RuntimeError("GoatCounter HTTP " + str(exc.code)) from None
+            raise RuntimeError("GoatCounter " + endpoint + " HTTP " + str(exc.code)) from None
         except (URLError, TimeoutError):
             if attempt == 3:
                 raise RuntimeError("GoatCounter connection failed") from None
